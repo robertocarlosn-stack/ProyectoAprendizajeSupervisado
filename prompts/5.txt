@@ -1,0 +1,116 @@
+FASE 5
+
+INTERPRETABILIDAD DEL MODELO
+
+Modelo definitivo:
+
+MobileNetV2 congelado
++
+Embeddings
++
+Logistic Regression
+
+Macro F1 = 0.9200
+
+--------------------------------------------------
+
+OBJETIVO
+
+Explicar visualmente qué aprendió el modelo.
+
+--------------------------------------------------
+
+1. Analizar matriz de confusión final
+
+Identificar:
+
+- clases más fáciles
+- clases más difíciles
+- pares de confusión
+
+--------------------------------------------------
+
+2. Analizar errores
+
+Extraer:
+
+- 20 errores aleatorios
+
+Mostrar:
+
+imagen
+etiqueta real
+predicción
+probabilidad
+
+Explicar patrones observados.
+
+--------------------------------------------------
+
+3. Visualización de embeddings
+
+Usar:
+
+PCA 2D
+t-SNE 2D
+
+sobre embeddings MobileNetV2
+
+Mostrar:
+
+- color por clase
+- centroides
+- solapamientos
+
+--------------------------------------------------
+
+4. Análisis por clase
+
+Calcular:
+
+precision
+recall
+f1
+
+por clase
+
+Identificar:
+
+- mejor clase
+- peor clase
+
+--------------------------------------------------
+
+5. Grad-CAM
+
+Generar mapas de atención
+
+para:
+
+- perro
+- gato
+- elefante
+- mariposa
+- araña
+
+Visualizar:
+
+imagen original
+heatmap
+superposición
+
+--------------------------------------------------
+
+Actualizar avance.md
+
+Agregar:
+
+Interpretabilidad
+
+Principales errores
+
+Principales fortalezas
+
+Confusiones relevantes
+
+Conclusiones

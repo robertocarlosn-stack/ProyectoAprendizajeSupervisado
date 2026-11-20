@@ -1,0 +1,1 @@
+Generar un diagrama, que represente todas las desiciones tomadas desde el incio en el que se pueda ver las opciones aceptadas y rechazadas de este notebook, explicadas como story telling y me permita entender todo el experimento de este notebook

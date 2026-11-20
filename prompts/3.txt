@@ -1,0 +1,166 @@
+FASE 3
+
+COMPARACIÓN DE REPRESENTACIONES
+
+Objetivo:
+
+Determinar cuál representación de imágenes
+es más efectiva para Animal-10.
+
+NO realizar todavía fine tuning.
+
+NO entrenar CNN desde cero.
+
+--------------------------------------------------
+
+PIPELINE A
+
+224x224
+↓
+Flatten
+↓
+StandardScaler
+↓
+PCA (95% varianza)
+↓
+Logistic Regression
+
+--------------------------------------------------
+
+PIPELINE B
+
+224x224
+↓
+Flatten
+↓
+StandardScaler
+↓
+PCA (95% varianza)
+↓
+Linear SVM
+
+--------------------------------------------------
+
+PIPELINE C
+
+224x224
+↓
+MobileNetV2 preentrenado
+↓
+Feature Extraction
+↓
+Embedding
+↓
+Logistic Regression
+
+--------------------------------------------------
+
+REQUISITOS
+
+Usar exclusivamente:
+
+train.csv
+validation.csv
+test.csv
+
+Mantener ausencia de data leakage.
+
+--------------------------------------------------
+
+HIPERPARÁMETROS
+
+Logistic Regression:
+
+Grid:
+C = [0.01,0.1,1,10]
+
+SVM:
+
+Grid:
+C = [0.01,0.1,1,10]
+
+Validación:
+
+validation set
+
+Nunca usar test para seleccionar modelos.
+
+--------------------------------------------------
+
+MÉTRICAS
+
+Accuracy
+
+Balanced Accuracy
+
+Macro Precision
+
+Macro Recall
+
+Macro F1
+
+Confusion Matrix
+
+--------------------------------------------------
+
+GRÁFICOS
+
+1 Accuracy comparación
+
+2 Macro F1 comparación
+
+3 PCA explained variance
+
+4 PCA scatter 2D
+
+5 Curvas de validación LR
+
+6 Curvas de validación SVM
+
+7 Matrices de confusión
+
+8 Embeddings MobileNet proyectados con PCA
+
+9 Embeddings MobileNet proyectados con t-SNE
+
+--------------------------------------------------
+
+AVANCE.MD
+
+Agregar:
+
+# Fase 3
+
+## Resultados
+
+Tabla completa
+
+## Mejor representación
+
+explicar
+
+## Errores frecuentes
+
+analizar confusión
+
+## Decisión para Fase 4
+
+Escoger el ganador.
+
+No entrenar aún MobileNetV2.
+Solo feature extraction.
+
+--------------------------------------------------
+
+PREGUNTA FINAL
+
+¿Cuál representación debe continuar a Fase 4?
+
+A)
+PCA + Logistic Regression
+
+B)
+PCA + SVM
+
+C)
+MobileNetV2 Embeddings

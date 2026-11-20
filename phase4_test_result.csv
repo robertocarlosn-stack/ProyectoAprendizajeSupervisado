@@ -1,0 +1,2 @@
+experiment,label,checkpoint_epoch,loss,accuracy,balanced_accuracy,macro_precision,macro_recall,macro_f1
+A_feature_extraction,A - Feature Extraction,2,0.599951947927475,0.905,0.8983505893831982,0.8994618925965676,0.8983505893831982,0.8968459340317931

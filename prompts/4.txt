@@ -1,0 +1,84 @@
+FASE 4
+
+MOBILENETV2 FINE TUNING
+
+Objetivo:
+
+Determinar si Fine-Tuning mejora el
+resultado obtenido con MobileNetV2
+Feature Extraction.
+
+Resultado actual:
+
+Macro F1 = 0.9200
+Balanced Accuracy = 0.9120
+
+--------------------------------------------------
+
+Experimento A
+
+Feature Extraction
+
+(backbone congelado)
+
+--------------------------------------------------
+
+Experimento B
+
+Fine Tuning parcial
+
+descongelar últimas capas
+
+--------------------------------------------------
+
+Experimento C
+
+Fine Tuning completo
+
+--------------------------------------------------
+
+Métricas
+
+Accuracy
+Macro Precision
+Macro Recall
+Macro F1
+Balanced Accuracy
+
+--------------------------------------------------
+
+Gráficos
+
+1 Loss Train vs Validation
+
+2 Accuracy Train vs Validation
+
+3 Macro F1 por época
+
+4 Curvas de aprendizaje
+
+5 Matrices de confusión
+
+6 Comparación Feature Extraction vs Fine Tuning
+
+--------------------------------------------------
+
+Evitar data leakage
+
+No usar test para seleccionar hiperparámetros.
+
+Usar validation para tuning.
+
+El test solo debe evaluarse una vez al final.
+
+--------------------------------------------------
+
+Actualizar avance.md
+
+Responder:
+
+¿Vale la pena Fine Tuning?
+
+¿Cuál es el mejor checkpoint?
+
+¿Cuál será el modelo definitivo?

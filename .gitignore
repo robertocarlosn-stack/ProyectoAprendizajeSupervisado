@@ -1,0 +1,32 @@
+# Dataset original: descargar por separado desde Kaggle
+data/
+
+# Embeddings y cachés derivados (regenerables)
+*.npz
+image_hashes.csv
+
+# Checkpoints de entrenamiento
+phase4_checkpoints/
+
+# Python y Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# IDE y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archivos locales y secretos
+.env
+.env.*
+*.log
+

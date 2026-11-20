@@ -1,0 +1,11 @@
+comparacion,control,hallazgos,estado
+train vs validation,rutas compartidas,0,PASS
+train vs validation,MD5 compartidos,0,PASS
+train vs validation,grupos duplicados compartidos,0,PASS
+train vs test,rutas compartidas,0,PASS
+train vs test,MD5 compartidos,0,PASS
+train vs test,grupos duplicados compartidos,0,PASS
+validation vs test,rutas compartidas,0,PASS
+validation vs test,MD5 compartidos,0,PASS
+validation vs test,grupos duplicados compartidos,0,PASS
+todos los splits,pares duplicados cruzados,0,PASS

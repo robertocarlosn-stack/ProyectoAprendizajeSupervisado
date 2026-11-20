@@ -1,0 +1,294 @@
+Proyecto:
+Clasificación multiclase Animal-10.
+
+Continuar sobre:
+
+animal10_project.ipynb
+
+y actualizar:
+
+avance.md
+
+NO implementar todavía modelos de machine learning.
+
+Objetivo:
+Construir un pipeline de datos reproducible,
+evitando fugas de información (data leakage)
+y dejando listo el dataset para entrenamiento.
+
+Usar los resultados de Fase 1:
+
+- 26,179 imágenes válidas
+- 10 clases
+- Desbalance 3.36:1
+- resolución heterogénea
+- resolución objetivo recomendada 224x224
+- 0 imágenes corruptas
+- 5 imágenes muy pequeñas
+- 1970 imágenes extremadamente grandes
+
+--------------------------------------------------
+FASE 2
+PREPROCESAMIENTO Y DATASET SPLIT
+--------------------------------------------------
+
+Agregar en el notebook:
+
+# FASE 2 - PREPROCESSING AND DATA SPLIT
+
+Subsecciones:
+
+## 1. Carga de metadatos
+
+## 2. Búsqueda de posibles duplicados
+
+## 3. Tratamiento de imágenes problemáticas
+
+## 4. Construcción del dataset maestro
+
+## 5. División estratificada
+
+## 6. Verificación de fugas de datos
+
+## 7. Pipeline de preprocesamiento
+
+## 8. Dataset final
+
+--------------------------------------------------
+OBJETIVOS
+--------------------------------------------------
+
+1. Detectar potenciales duplicados.
+
+Implementar:
+
+- perceptual hash
+- average hash
+- md5 hash
+
+Generar reporte:
+
+- duplicados exactos
+- duplicados potenciales
+
+NO eliminar automáticamente.
+
+Guardar lista para revisión.
+
+--------------------------------------------------
+2. TRATAMIENTO DE OUTLIERS
+
+Analizar:
+
+- 5 imágenes pequeñas
+- imágenes extremadamente grandes
+
+Generar tabla:
+
+archivo
+clase
+ancho
+alto
+área
+
+Tomar decisión documentada.
+
+--------------------------------------------------
+3. CONVERSIÓN DE FORMATO
+
+Convertir todo a:
+
+RGB
+
+Verificar:
+
+- número de canales
+- consistencia
+
+--------------------------------------------------
+4. PREPARACIÓN DE RESOLUCIÓN
+
+Implementar función:
+
+resize_with_padding()
+
+Objetivo:
+
+224x224
+
+Comparar:
+
+A)
+direct resize
+
+B)
+resize + padding
+
+Mostrar ejemplos visuales.
+
+Explicar decisión.
+
+--------------------------------------------------
+5. DIVISIÓN DEL DATASET
+
+Crear:
+
+70% Train
+15% Validation
+15% Test
+
+Usar:
+
+train_test_split
+stratify=y
+random_state=42
+
+Guardar:
+
+train.csv
+validation.csv
+test.csv
+
+con:
+
+filepath
+class_name
+class_id
+
+--------------------------------------------------
+6. VERIFICAR DATA LEAKAGE
+
+Comprobar:
+
+- ninguna imagen repetida
+- ninguna imagen duplicada
+- ninguna ruta compartida
+
+entre:
+
+train
+validation
+test
+
+Generar reporte.
+
+Si encuentra problemas:
+
+detener proceso
+mostrar advertencia
+
+--------------------------------------------------
+7. BALANCEO
+
+NO aplicar todavía.
+
+Calcular:
+
+class weights
+
+usando:
+
+sklearn.utils.class_weight
+
+Generar tabla.
+
+Guardar para futuras fases.
+
+--------------------------------------------------
+8. DATA AUGMENTATION CANDIDATES
+
+NO entrenar modelos.
+
+Mostrar ejemplos de:
+
+- flip horizontal
+- rotation ±15°
+- zoom
+- brightness
+- contrast
+
+Comparar visualmente.
+
+Generar recomendación.
+
+--------------------------------------------------
+GRÁFICOS OBLIGATORIOS
+
+1. Distribución Train-Val-Test
+
+2. Distribución por clase en cada split
+
+3. Heatmap de balance
+
+4. Ejemplos originales vs resize
+
+5. Ejemplos originales vs augmentation
+
+6. Distribución de tamaños después del resize
+
+--------------------------------------------------
+ACTUALIZAR AVANCE.MD
+
+Agregar:
+
+# Fase 2 - Preprocessing
+
+## Resolución seleccionada
+
+## Duplicados encontrados
+
+## Estrategia de resize
+
+## Estrategia de augmentation
+
+## Split generado
+
+Train:
+n =
+
+Validation:
+n =
+
+Test:
+n =
+
+## Class weights
+
+mostrar tabla
+
+## Leakage Check
+
+PASS o FAIL
+
+## Decisiones tomadas
+
+explicar
+
+## Recomendaciones para Fase 3
+
+Indicar:
+
+- representación de características
+- PCA o no PCA
+- modelos candidatos
+- baseline recomendado
+
+--------------------------------------------------
+SECCIÓN FINAL
+
+# DECISIÓN PARA CONTINUAR
+
+Responder:
+
+1. ¿El dataset es seguro para entrenamiento?
+2. ¿Existe data leakage?
+3. ¿Qué representación se recomienda?
+
+   a) imágenes flatten + PCA
+   b) imágenes flatten sin PCA
+   c) CNN / Transfer Learning
+
+4. ¿Cuáles serán los modelos baseline de la siguiente fase?
+
+No entrenar modelos todavía.
+Solo preparar los datos.

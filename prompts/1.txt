@@ -1,0 +1,215 @@
+Proyecto: Clasificación de animales usando Animal-10 (Kaggle)
+
+Contexto:
+Estoy desarrollando un proyecto final de Aprendizaje Supervisado.
+
+El dataset Animal-10 ya está descargado dentro del directorio:
+
+data/
+
+Debes trabajar SIEMPRE sobre el mismo notebook:
+
+animal10_project.ipynb
+
+y además mantener actualizado un archivo:
+
+avance.md
+
+El objetivo es construir un proyecto completo fase por fase.
+
+NO implementar todavía modelos de machine learning.
+
+En esta etapa únicamente realizar Exploratory Data Analysis (EDA).
+
+--------------------------------------------------
+OBJETIVOS DE LA FASE 1
+--------------------------------------------------
+
+1. Explorar completamente el dataset.
+
+2. Identificar:
+
+- número de clases
+- nombres de clases
+- cantidad de imágenes por clase
+- balance/desbalance
+- tamaños de imágenes
+- formatos de imagen
+- posibles problemas de calidad
+- imágenes corruptas
+
+3. Generar visualizaciones profesionales para un informe académico.
+
+4. Crear conclusiones automáticas basadas en los resultados.
+
+--------------------------------------------------
+NOTEBOOK
+--------------------------------------------------
+
+Agregar una sección nueva:
+
+# FASE 1 - EXPLORATORY DATA ANALYSIS
+
+con subsecciones:
+
+## 1. Carga de librerías
+
+## 2. Exploración del dataset
+
+## 3. Distribución de clases
+
+## 4. Tamaño de imágenes
+
+## 5. Visualización de ejemplos
+
+## 6. Estadísticas RGB
+
+## 7. Outliers y datos corruptos
+
+## 8. Hallazgos principales
+
+Cada subsección debe incluir:
+
+- explicación markdown
+- código
+- gráficos
+- interpretación automática
+
+--------------------------------------------------
+GRÁFICOS OBLIGATORIOS
+--------------------------------------------------
+
+1. Barplot de cantidad de imágenes por clase
+
+2. Pie chart por clase
+
+3. Histograma de anchos
+
+4. Histograma de altos
+
+5. Scatter:
+(ancho vs alto)
+
+6. Mosaico 5x5 de imágenes aleatorias
+
+7. Una figura por clase mostrando ejemplos
+
+8. Histogramas RGB
+
+9. Distribución promedio de colores
+
+10. Heatmap resumen con estadísticas por clase
+
+--------------------------------------------------
+ESTADÍSTICAS A CALCULAR
+--------------------------------------------------
+
+Para cada clase:
+
+- cantidad de imágenes
+- tamaño promedio
+- desviación estándar
+- tamaño mínimo
+- tamaño máximo
+
+Generar dataframe resumen.
+
+--------------------------------------------------
+DETECCIÓN DE PROBLEMAS
+--------------------------------------------------
+
+Detectar automáticamente:
+
+- imágenes corruptas
+- imágenes vacías
+- tamaños extremadamente pequeños
+- tamaños extremadamente grandes
+
+Crear un reporte.
+
+--------------------------------------------------
+ARCHIVO AVANCE.MD
+--------------------------------------------------
+
+Crear o actualizar:
+
+avance.md
+
+Agregar sección:
+
+# Fase 1 - EDA
+
+Guardar:
+
+## Resumen del Dataset
+
+Número total de imágenes
+
+Número de clases
+
+Nombres de clases
+
+## Distribución
+
+Tabla por clase
+
+## Hallazgos
+
+Lista de hallazgos encontrados
+
+## Riesgos detectados
+
+Problemas de calidad
+
+Desbalances
+
+Imágenes corruptas
+
+## Recomendaciones para Fase 2
+
+Recomendar:
+
+- resolución objetivo sugerida
+- método de división train/validation/test
+- necesidad de data augmentation
+- necesidad de balanceo
+
+--------------------------------------------------
+CRITERIOS DE CALIDAD
+--------------------------------------------------
+
+Todo gráfico debe:
+
+- tener título
+- etiquetas
+- colores adecuados
+- alta resolución
+
+Todo código debe:
+
+- ejecutarse sin modificaciones
+- ser modular
+- usar funciones reutilizables
+
+Todo markdown debe:
+
+- explicar qué se hizo
+- explicar qué significa el gráfico
+- explicar cómo influirá en futuras decisiones
+
+--------------------------------------------------
+AL FINAL
+--------------------------------------------------
+
+Generar automáticamente una sección:
+
+# DECISIÓN PARA CONTINUAR
+
+Resumir:
+
+1. Qué aprendimos del dataset.
+2. Qué debemos hacer en Fase 2.
+3. Qué parámetros deberán usarse en el preprocesamiento.
+
+No implementar todavía división train/test ni modelos.
+Solo EDA.
