@@ -1,5 +1,6 @@
-# Dataset original: descargar por separado desde Kaggle
-data/
+# El dataset descomprimido se versiona; el ZIP local se excluye por superar
+# el límite de tamaño de archivos de GitHub.
+data.zip
 
 # Embeddings y cachés derivados (regenerables)
 *.npz
